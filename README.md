@@ -1,11 +1,4 @@
 # Student-Crud-Operations-Using-SpringBoot
-Student  (ADD, DELETE,UPDATE,GETSTUDENT DETAILS) Crud Operations using Springboot(STS tool) project
-
-# StudentInfo-springboot-project
-springboot project with resttemplate 
-
-# Spring Boot Student API
-
 This is a simple Spring Boot API that manages students. The API has endpoints for creating, retrieving, updating, and deleting students.
 
 ## Getting Started
