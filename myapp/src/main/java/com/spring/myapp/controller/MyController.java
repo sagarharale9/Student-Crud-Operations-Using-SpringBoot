@@ -52,6 +52,9 @@ public class MyController {
 	// Get Student Details By Id
 	@GetMapping("/{id}")
 	public ResponseEntity<Object> getStudentById(@PathVariable int id) {
+		if(id < 1){
+			throw new IllegalArgumentException("Invalid Student Id: "+id);
+		}else{
 		StudentDto getStudent = studentserviceimpl.getStudentById(id);
 		if (getStudent != null) {
 			String message = "Getting Student Record Of Id: " + id;
@@ -60,6 +63,7 @@ public class MyController {
 			String message = "No Student Record found with the Id: " + id;
 			return ResponseEntity.status(HttpStatus.NOT_FOUND)
 					.body(new ErrorApiResponce(HttpStatus.NOT_FOUND.value(), message));
+		}
 		}
 	}
 
